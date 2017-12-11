@@ -2,6 +2,9 @@
 
 Datadog middleware for Connect JS / Express
 
+## Reason for fork
+
+This forks will attach any tags provided on req.tags. This is necessary to support tags known only at run-time such as tenant.
 
 ## Usage
 
@@ -24,5 +27,5 @@ All options are optional.
 
 ## License
 
-View the [LICENSE](https://github.com/AppPress/node-connect-datadog/blob/master/LICENSE) file.
+View the [LICENSE](https://github.com/blend/node-connect-datadog/blob/master/LICENSE) file.
 
