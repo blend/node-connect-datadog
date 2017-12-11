@@ -16,5 +16,12 @@
 	"readmeFilename": "README.md",
 	"dependencies": {
 		"node-dogstatsd": "0.0.6"
+	},
+	"devDependencies": {
+		"expect.js": "^0.3.1",
+		"mocha": "^4.0.1"
+	},
+	"scripts": {
+		"test": "mocha --exit test"
 	}
 }
