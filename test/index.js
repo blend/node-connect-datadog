@@ -66,7 +66,7 @@ describe('connect datadog middleware', () => {
         tags: ['test:true','configGroup:testConfigGroup'],
       }), {
         statusCode: 404,
-      }, { });
+      }, { dynamic_tags: true });
       const configGroupTag = _.find(statTags, tag => /configGroup/.test(tag));
       expect(configGroupTag).to.be('configGroup:testConfigGroup');
     });
