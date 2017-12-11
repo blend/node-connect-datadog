@@ -62,6 +62,13 @@ describe('connect datadog middleware', () => {
     });
 
     it('attaches tags dynamically', () => {
+      const statTags = generateStatTags(_.extend(req, {
+        tags: ['test:true','configGroup:testConfigGroup'],
+      }), {
+        statusCode: 404,
+      }, { });
+      const configGroupTag = _.find(statTags, tag => /configGroup/.test(tag));
+      expect(configGroupTag).to.be('configGroup:testConfigGroup');
     });
   });
 });
